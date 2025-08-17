@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Navvico – Plan smarter routes with AI, just by chatting</title>
-  <meta name="description" content="Navvico is the conversational, AI‑powered route optimization SaaS. Plan, assign, and re‑optimize deliveries in real time by simply chatting with your copilot." />
+  <meta name="description" content="Navvico is the conversational, AI-powered route optimization SaaS. Plan, assign, and re-optimize deliveries in real time by simply chatting with your copilot." />
   <meta property="og:title" content="Navvico – Plan smarter routes with AI" />
-  <meta property="og:description" content="Conversational, real‑time route optimization. Join the waitlist." />
+  <meta property="og:description" content="Conversational, real-time route optimization. Join the waitlist." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://navvico.example" />
-  <meta property="og:image" content="/img/og-image.jpg" />
+  <meta property="og:url" content="https://www.navvico.com" />
+  <meta property="og:image" content="img/og-image.jpg" />
   <link rel="icon" type="image/png" href="img/v_logo.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    .container { max-width: 1120px; }
-    .gradient { background: linear-gradient(135deg, #22c55e 0%, #3b82f6 50%, #8b5cf6 100%); }
+    :root{
+      --brand:#2563eb;           /* primary blue */
+      --brand-2:#3b82f6;         /* secondary blue */
+      --brand-3:#60a5fa;         /* light blue */
+    }
+    .container{max-width:1120px}
+    .gradient{background:linear-gradient(135deg,var(--brand) 0%,var(--brand-2) 50%,var(--brand-3) 100%)}
+    .brand{color:var(--brand)}
+    .btn-brand{background:var(--brand)}
+    .btn-brand:hover{background:#1e4fd8}
+    .logo-img{height:32px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.08))}
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
@@ -23,8 +31,8 @@
   <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-gray-100">
     <nav class="container mx-auto flex items-center justify-between py-3 px-4">
       <a href="#" class="flex items-center gap-2">
-        <img src="./img/logo.png" alt="Navvico" class="h-8 w-auto" onerror="this.style.display='none'"/>
-      
+        <img src="img/logo.png" alt="Navvico" class="logo-img"/>
+     
       </a>
       <div class="hidden md:flex items-center gap-6 text-sm">
         <a href="#features" class="hover:text-blue-600">Features</a>
@@ -32,7 +40,7 @@
         <a href="#pricing" class="hover:text-blue-600">Pricing</a>
         <a href="#faq" class="hover:text-blue-600">FAQ</a>
       </div>
-      <a href="#waitlist" class="inline-flex items-center rounded-xl bg-blue-600 text-white px-4 py-2 text-sm font-medium shadow hover:bg-blue-700">Join waitlist</a>
+      <a href="#waitlist" class="inline-flex items-center rounded-xl btn-brand text-white px-4 py-2 text-sm font-medium shadow">Join waitlist</a>
     </nav>
   </header>
 
@@ -41,13 +49,13 @@
     <div class="absolute inset-0 gradient opacity-10 pointer-events-none"></div>
     <div class="container mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
       <div>
-        <div class="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs text-emerald-700">New • Conversational Route Optimization</div>
+        <div class="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs text-blue-700">New • Conversational Route Optimization</div>
         <h1 class="mt-4 text-3xl md:text-5xl font-extrabold leading-tight">
           Plan smarter routes with <span class="text-blue-600">AI</span> — just by <span class="text-blue-600">chatting</span>
         </h1>
-        <p class="mt-4 text-gray-600 md:text-lg">Navvico is the AI‑powered route optimization SaaS that helps logistics teams plan faster, cut costs, and deliver on time. Tell Navvico what you need in natural language — your copilot takes care of the rest.</p>
+        <p class="mt-4 text-gray-600 md:text-lg">Navvico is the AI-powered route optimization SaaS that helps logistics teams plan faster, cut costs, and deliver on time. Tell Navvico what you need in natural language — your copilot takes care of the rest.</p>
         <div class="mt-6 flex flex-col sm:flex-row gap-3">
-          <a href="#waitlist" class="inline-flex items-center justify-center rounded-xl bg-blue-600 text-white px-5 py-3 font-medium shadow hover:bg-blue-700">Join the waitlist</a>
+          <a href="#waitlist" class="inline-flex items-center justify-center rounded-xl btn-brand text-white px-5 py-3 font-medium shadow">Join the waitlist</a>
           <a href="#demo" class="inline-flex items-center justify-center rounded-xl bg-gray-900 text-white px-5 py-3 font-medium shadow hover:bg-black/90">See the demo plan</a>
         </div>
         <p class="mt-4 text-xs text-gray-500">Currently in development. No credit card required to join the waitlist.</p>
@@ -60,15 +68,15 @@
     </div>
   </section>
 
-  <!-- PROBLEM / SOLUTION (ROUTE-FOCUSED) -->
+  <!-- PROBLEM / SOLUTION -->
   <section id="solution" class="container mx-auto px-4 py-12 md:py-20">
     <div class="grid md:grid-cols-2 gap-12">
       <div class="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
         <h2 class="text-2xl font-bold mb-3">The problem with route planning</h2>
-        <p class="text-gray-600">Planning deliveries is complex and slow. Spreadsheets and static tools can’t adapt to real‑time conditions, while constraints like capacity, driver shifts, and traffic change constantly.</p>
+        <p class="text-gray-600">Planning deliveries is complex and slow. Spreadsheets and static tools can’t adapt to real-time conditions, while constraints like capacity, driver shifts, and traffic change constantly.</p>
         <ul class="mt-4 space-y-2 text-gray-600 list-disc list-inside">
           <li>Hours lost to manual planning</li>
-          <li>No real‑time re‑optimization</li>
+          <li>No real-time re-optimization</li>
           <li>Higher mileage, fuel, and delays</li>
         </ul>
       </div>
@@ -76,30 +84,29 @@
         <h2 class="text-2xl font-bold mb-3">Navvico’s solution</h2>
         <p class="text-gray-600">A conversational AI copilot that understands your constraints and optimizes in real time. Describe your deliveries and goals — Navvico plans, assigns, and keeps routes optimal as conditions change.</p>
         <ul class="mt-4 space-y-2 text-gray-600 list-disc list-inside">
-          <li>Chat‑first planning, no training needed</li>
-          <li>Live re‑optimization for traffic and status changes</li>
+          <li>Chat-first planning, no training needed</li>
+          <li>Live re-optimization for traffic and status changes</li>
           <li>Automatic vehicle assignment based on payload & shifts</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- DEMO (TRANSPARENT PLACEHOLDER) -->
+  <!-- DEMO PLACEHOLDER -->
   <section id="demo" class="bg-white border-y border-gray-100">
     <div class="container mx-auto px-4 py-14">
       <div class="grid md:grid-cols-2 gap-10 items-center">
         <div class="rounded-2xl border border-dashed border-gray-300 p-8 bg-gray-50">
           <h3 class="text-xl font-semibold">Short demo (coming soon)</h3>
           <p class="mt-2 text-gray-600">We’re currently building the product. A short walkthrough video and interactive prototype will be available here. Want early access?</p>
-          <a href="#waitlist" class="mt-4 inline-flex items-center rounded-xl bg-blue-600 text-white px-5 py-3 font-medium shadow hover:bg-blue-700">Get on the list</a>
+          <a href="#waitlist" class="mt-4 inline-flex items-center rounded-xl btn-brand text-white px-5 py-3 font-medium shadow">Get on the list</a>
           <p class="mt-3 text-xs text-gray-500">Have a Figma or screen recording? You can embed it here later.</p>
         </div>
-        <!-- Removed specific command examples to avoid implying limits -->
         <div class="rounded-2xl border border-gray-200 p-8 bg-white shadow-sm">
           <h4 class="font-semibold mb-2">What you’ll be able to do</h4>
           <ul class="list-disc list-inside text-gray-700 text-sm space-y-2">
             <li>Describe deliveries and constraints in plain English</li>
-            <li>Re‑optimize routes live as drivers go online/offline</li>
+            <li>Re-optimize routes live as drivers go online/offline</li>
             <li>Minimize distance, time, or cost based on your goals</li>
             <li>Assign new orders to available vehicles instantly</li>
           </ul>
@@ -108,10 +115,10 @@
     </div>
   </section>
 
-  <!-- CORE FEATURES (NAVVICO-SPECIFIC) -->
+  <!-- FEATURES -->
   <section id="features" class="container mx-auto px-4 py-16">
     <h3 class="text-2xl md:text-3xl font-extrabold text-center">What you’ll get</h3>
-    <p class="text-center text-gray-600 mt-2">Built for modern logistics teams — conversational, real‑time, and cost‑aware.</p>
+    <p class="text-center text-gray-600 mt-2">Built for modern logistics teams — conversational, real-time, and cost-aware.</p>
     <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <div class="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
         <div class="h-10 w-10 rounded-lg bg-blue-100 flex items-center justify-center mb-4">💬</div>
@@ -120,33 +127,33 @@
       </div>
       <div class="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
         <div class="h-10 w-10 rounded-lg bg-blue-100 flex items-center justify-center mb-4">⚡</div>
-        <h4 class="font-semibold mb-2">Real‑time Optimization</h4>
+        <h4 class="font-semibold mb-2">Real-time Optimization</h4>
         <p class="text-gray-600 text-sm">Adapts instantly to traffic, delays, and driver availability.</p>
       </div>
       <div class="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
         <div class="h-10 w-10 rounded-lg bg-blue-100 flex items-center justify-center mb-4">🚚</div>
         <h4 class="font-semibold mb-2">Smart Assignments</h4>
-        <p class="text-gray-600 text-sm">Auto‑assigns orders to vehicles considering payload, location, and ETA.</p>
+        <p class="text-gray-600 text-sm">Auto-assigns orders to vehicles considering payload, location, and ETA.</p>
       </div>
       <div class="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
         <div class="h-10 w-10 rounded-lg bg-blue-100 flex items-center justify-center mb-4">🏭</div>
-        <h4 class="font-semibold mb-2">Multi‑Depot Support</h4>
+        <h4 class="font-semibold mb-2">Multi-Depot Support</h4>
         <p class="text-gray-600 text-sm">Plan across multiple warehouses with constraints and priorities.</p>
       </div>
       <div class="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
         <div class="h-10 w-10 rounded-lg bg-blue-100 flex items-center justify-center mb-4">🚦</div>
-        <h4 class="font-semibold mb-2">Traffic‑aware Routing</h4>
-        <p class="text-gray-600 text-sm">Every delivery gets its own optimized, traffic‑free path — updated in real time.</p>
+        <h4 class="font-semibold mb-2">Traffic-aware Routing</h4>
+        <p class="text-gray-600 text-sm">Every delivery gets its own optimized, traffic-free path — updated in real time.</p>
       </div>
       <div class="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
         <div class="h-10 w-10 rounded-lg bg-blue-100 flex items-center justify-center mb-4">📱</div>
-        <h4 class="font-semibold mb-2">Phone‑based Driver Tracking</h4>
-        <p class="text-gray-600 text-sm">No extra hardware or per‑vehicle fees. Track drivers directly via their smartphones.</p>
+        <h4 class="font-semibold mb-2">Phone-based Driver Tracking</h4>
+        <p class="text-gray-600 text-sm">No extra hardware or per-vehicle fees. Track drivers directly via their smartphones.</p>
       </div>
     </div>
   </section>
 
-  <!-- PRICING & ADVANTAGES -->
+  <!-- PRICING / ADVANTAGES -->
   <section id="pricing" class="bg-white border-y border-gray-100">
     <div class="container mx-auto px-4 py-16">
       <h3 class="text-2xl md:text-3xl font-extrabold text-center">Pricing & Advantages</h3>
@@ -162,18 +169,18 @@
         </div>
         <div class="rounded-2xl border border-gray-200 p-6 shadow-sm bg-gray-50">
           <h4 class="font-semibold mb-2">No Hidden Costs</h4>
-          <p class="text-gray-600 text-sm">Track drivers with their phones — no hardware, no per‑vehicle fees.</p>
+          <p class="text-gray-600 text-sm">Track drivers with their phones — no hardware, no per-vehicle fees.</p>
         </div>
       </div>
       <div class="mt-10 grid md:grid-cols-2 gap-6">
         <div class="rounded-2xl border border-gray-200 p-6 shadow-sm">
           <h4 class="font-semibold mb-2">Why we’re better</h4>
           <ul class="text-gray-600 text-sm list-disc list-inside space-y-1">
-            <li>Traffic‑aware, delivery‑level route optimization</li>
+            <li>Traffic-aware, delivery-level route optimization</li>
             <li>Driver tracking via phone, no devices needed</li>
             <li>Cheaper than Routific, OptimoRoute, Onfleet</li>
             <li>Conversational chat interface (others use complex dashboards)</li>
-            <li>Multi‑warehouse ready from day one</li>
+            <li>Multi-warehouse ready from day one</li>
             <li>Scales from 5 to 500 vehicles without enterprise contracts</li>
           </ul>
         </div>
@@ -185,7 +192,7 @@
     </div>
   </section>
 
-  <!-- FUTURE WORKFLOW -->
+  <!-- HOW IT WILL WORK -->
   <section class="bg-white border-y border-gray-100">
     <div class="container mx-auto px-4 py-16">
       <h3 class="text-2xl md:text-3xl font-extrabold text-center">How it will work</h3>
@@ -211,7 +218,7 @@
     </div>
   </section>
 
-  <!-- EARLY ADOPTER / WAITLIST (EMAIL + COUNTRY ONLY) -->
+  <!-- WAITLIST (Formspree) -->
   <section id="waitlist" class="container mx-auto px-4 py-16">
     <div class="rounded-2xl border border-gray-200 p-8 md:p-10 bg-white shadow-sm">
       <div class="grid md:grid-cols-3 gap-8 items-center">
@@ -219,8 +226,7 @@
           <h3 class="text-2xl md:text-3xl font-extrabold">Join the early access list</h3>
           <p class="text-gray-600 mt-2">No account needed. We only collect your email and country to prioritize invites.</p>
 
-          <!-- Replace action URL with your Formspree endpoint -->
-          <form action="https://formspree.io/f/mblkerek" method="POST" class="mt-5 grid sm:grid-cols-3 gap-3" autocomplete="off">
+          <form id="signup-form" action="https://formspree.io/f/mblkerek" method="POST" class="mt-5 grid sm:grid-cols-3 gap-3" autocomplete="off">
             <input type="email" name="email" required placeholder="Work email" class="sm:col-span-2 rounded-xl border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
             <select name="country" required class="rounded-xl border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
               <option value="" disabled selected>Country</option>
@@ -232,14 +238,11 @@
               <option value="FR">France</option>
               <option value="US">United States</option>
             </select>
-
-            <!-- Honeypot -->
             <input type="text" name="_website" tabindex="-1" autocomplete="off" style="display:none" />
-            <!-- Optional subject/tag -->
             <input type="hidden" name="_subject" value="New Navvico Waitlist Signup" />
-
-            <button type="submit" class="sm:col-span-3 rounded-xl bg-blue-600 text-white px-5 py-3 font-medium shadow hover:bg-blue-700">Join waitlist</button>
+            <button type="submit" class="sm:col-span-3 rounded-xl btn-brand text-white px-5 py-3 font-medium shadow">Join waitlist</button>
           </form>
+          <p class="mt-2 text-sm text-gray-600" id="form-status"></p>
           <p class="mt-3 text-xs text-gray-500">By submitting, you agree to be contacted about early access. You can opt out anytime.</p>
         </div>
         <div class="bg-gray-50 rounded-xl border border-gray-200 p-5">
@@ -247,7 +250,7 @@
           <ul class="text-sm text-gray-600 mt-2 space-y-1 list-disc list-inside">
             <li>No extra hardware required</li>
             <li>Delete your data any time</li>
-            <li>GDPR‑ready approach</li>
+            <li>GDPR-ready approach</li>
           </ul>
         </div>
       </div>
@@ -261,11 +264,11 @@
       <div class="mt-8 grid md:grid-cols-2 gap-6">
         <details class="rounded-xl border border-gray-200 p-5">
           <summary class="font-semibold cursor-pointer">What is Navvico?</summary>
-          <p class="mt-2 text-gray-600">Navvico is a conversational, AI‑powered route optimization platform. It plans, assigns, and re‑optimizes deliveries in real time as conditions change.</p>
+          <p class="mt-2 text-gray-600">Navvico is a conversational, AI-powered route optimization platform. It plans, assigns, and re-optimizes deliveries in real time as conditions change.</p>
         </details>
         <details class="rounded-xl border border-gray-200 p-5">
           <summary class="font-semibold cursor-pointer">How is it different from traditional planners?</summary>
-          <p class="mt-2 text-gray-600">It’s chat‑first, requires no training, and continuously re‑optimizes with live data like traffic, capacity, and driver status. Phone‑based driver tracking means no hardware costs.</p>
+          <p class="mt-2 text-gray-600">It’s chat-first, requires no training, and continuously re-optimizes with live data like traffic, capacity, and driver status. Phone-based driver tracking means no hardware costs.</p>
         </details>
         <details class="rounded-xl border border-gray-200 p-5">
           <summary class="font-semibold cursor-pointer">How much does it cost?</summary>
@@ -273,7 +276,7 @@
         </details>
         <details class="rounded-xl border border-gray-200 p-5">
           <summary class="font-semibold cursor-pointer">Do I need GPS devices or telematics?</summary>
-          <p class="mt-2 text-gray-600">No. Drivers use their smartphones for location and updates. No installations or per‑vehicle hardware charges.</p>
+          <p class="mt-2 text-gray-600">No. Drivers use their smartphones for location and updates. No installations or per-vehicle hardware charges.</p>
         </details>
         <details class="rounded-xl border border-gray-200 p-5">
           <summary class="font-semibold cursor-pointer">Can it handle traffic for each delivery?</summary>
@@ -292,7 +295,7 @@
     <div class="grid md:grid-cols-4 gap-6">
       <div>
         <div class="font-semibold">Navvico</div>
-        <p class="mt-2">Conversational, real‑time route optimization.</p>
+        <p class="mt-2">Conversational, real-time route optimization.</p>
       </div>
       <div>
         <div class="font-semibold">Product</div>
@@ -329,6 +332,24 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Optional: AJAX submit without page reload
+    const form = document.getElementById('signup-form');
+    const status = document.getElementById('form-status');
+    if(form){
+      form.addEventListener('submit', async (e)=>{
+        e.preventDefault();
+        status.textContent = 'Submitting…';
+        try{
+          const res = await fetch(form.action, {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}});
+          if(res.ok){ form.reset(); status.textContent = 'Thanks! You’re on the list.'; }
+          else{
+            const data = await res.json().catch(()=>({}));
+            status.textContent = (data && data.errors) ? data.errors.map(x=>x.message).join(', ') : 'Something went wrong. Please try again.';
+          }
+        }catch(err){ status.textContent = 'Network error. Please try again.'; }
+      });
+    }
   </script>
 </body>
 </html>
